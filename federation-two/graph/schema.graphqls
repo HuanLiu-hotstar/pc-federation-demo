@@ -1,0 +1,21 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+type Review {
+  ID: ID!
+  rating: Int!
+  content: [Content]
+}
+
+## Content defined in other subgraph
+extend type Content @key(fields: "ID") {
+  ID: ID! @external
+}
+
+input ReviewInput {
+    id: ID!
+}
+
+type Query {
+  GetReview(input: ReviewInput):Review
+}

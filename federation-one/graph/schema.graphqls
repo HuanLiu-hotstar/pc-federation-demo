@@ -1,0 +1,13 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+
+type Content @key(fields: "ID"){
+  ID: ID!
+  name: String!
+}
+
+type Query {
+  GetContent(id: ID!):Content
+}
