@@ -41,3 +41,9 @@ federation:
 func (r *entityResolver) FindContentByID(ctx context.Context, id string) (*model.Content, error)
 
 ```
+
+## start server
+
+```go
+go run server.go
+```

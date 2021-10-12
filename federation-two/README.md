@@ -49,3 +49,9 @@ federation:
 // model.Review should return with Content in schema definition
 func (r *queryResolver) GetReview(ctx context.Context, input *model.ReviewInput) (*model.Review, error) 
 ```
+
+## start server
+
+```go
+go run server.go
+```
